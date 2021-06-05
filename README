@@ -1,0 +1,12 @@
+# general command
+/start          start the bot
+/help           show this help
+
+# snort command
+/snortstart     run snort
+/snortstop      stop snort
+/snortrestart   restart snort
+/snortstatus    check snort status
+
+# log command
+/logstart       start displaying the snort log
