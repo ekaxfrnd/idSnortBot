@@ -1,5 +1,5 @@
 module.exports = {
-    start: `Hello there, I\'m Bishamon. Type /help to see more commands.`,
+    start: `Hello there, I\'m idSnort. Type /help to see more commands.`,
     help: `I can help you monitor snort logs from telegram.
 
 You can control me by sending these commands:
