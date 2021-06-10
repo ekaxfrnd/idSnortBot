@@ -47,15 +47,7 @@ bot.command('snortrestart', async ctx => {
 
 bot.command('logstart', async ctx => {
     await watch.watchStart()
-    setInterval( async () => {
-        const rl = await readline('./snort.log')
-        rl.on('line', (line, lineCount, byteCount) => {
-            ctx.reply(line)
-        })
-        .on('error', err => {
-            ctx.reply(err.message)
-        })
-    }, 3000)
+    ctx.reply('log has started successfully.')
 })
 
 bot.command('logstop', async ctx => {
