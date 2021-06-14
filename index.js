@@ -46,13 +46,21 @@ bot.command('snortrestart', async ctx => {
 })
 
 bot.command('logstart', async ctx => {
-    await watch.watchStart()
-    ctx.reply('log has started successfully.')
+    try {
+        await watch.watchStart()
+        ctx.reply('log has started successfully.')
+    } catch (err) {
+        ctx.reply('watch failed to start.')
+    }
 })
 
 bot.command('logstop', async ctx => {
-    await watch.watchStop()
-    ctx.reply('log has been stopped.')
+    try {
+        await watch.watchStop()
+        ctx.reply('log has been stopped.')
+    } catch (err) {
+        ctx.reply('failed to stop.')
+    }
 })
 
 bot.launch()
