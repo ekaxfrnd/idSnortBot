@@ -3,7 +3,7 @@ const exec = util.promisify(require('child_process').exec)
 
 module.exports = {
     watchStart: async () => {
-        const { stdout, stderr } = await exec('watch -n 1 tail -n 7 /var/log/snort/alert > snort.log &')
+        const { stdout, stderr } = await exec('sudo systemctl start watch')
         if(stdout) {
             console.log(`stdout: ${stdout}`)
         }
@@ -12,7 +12,7 @@ module.exports = {
         }
     },
     watchStop: async () => {
-        const { stdout, stderr } = await exec('killall watch')
+        const { stdout, stderr } = await exec('sudo systemctl stop watch')
         if(stdout) {
             console.log(`stdout: ${stdout}`)
         }
