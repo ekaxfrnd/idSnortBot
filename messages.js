@@ -15,5 +15,6 @@ You can control me by sending these commands:
 /snortstatus - check snort status
 
 # Log
-/logstart - start displaying the snort log`
+/logstart - start displaying the snort log
+/logstop - stop the log display`
 }
